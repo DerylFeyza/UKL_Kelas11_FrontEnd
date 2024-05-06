@@ -1,0 +1,122 @@
+.table-striped {
+	max-width: 150vh;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.dashboard-container .add-button {
+	border-radius: 10px;
+}
+
+.button-row button {
+	margin-right: 7px;
+}
+
+.table-container {
+	width: 100%;
+}
+
+.table-container table th:first-child,
+.table-container table td:first-child {
+	padding-left: 40px;
+}
+
+.table-container table th:first-child,
+.table-container table td:first-child {
+	width: 30%;
+}
+
+.table-container tbody {
+	display: block;
+	height: 460px;
+	overflow: auto;
+}
+
+.table-container ::-webkit-scrollbar {
+	background-color: #fff;
+	width: 16px;
+}
+
+.table-container ::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+
+.table-container ::-webkit-scrollbar-thumb {
+	background-color: #babac0;
+	border-radius: 16px;
+	border: 4px solid #fff;
+}
+
+.table-container ::-webkit-scrollbar-button {
+	display: none;
+}
+
+.table-container thead,
+.table-container tbody tr {
+	display: table;
+	width: 100%;
+}
+
+.table-container table td,
+.table-container table th {
+	width: 300px;
+	vertical-align: middle;
+	min-width: 100px;
+}
+
+.table-container table td:first-child {
+	max-width: 50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.dashboard-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.dashboard-top {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	height: 30%;
+}
+
+.dashboard-top h1 {
+	width: 100%;
+}
+
+.dashboard-top form {
+	width: 50%;
+}
+
+.food-image-container {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 20px;
+}
+
+.food-form-input input {
+	width: 100%;
+}
+
+.food-form-input label {
+	margin-top: 15px;
+	padding-left: 10px;
+}
+
+.food-image {
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+	object-fit: cover;
+}
+
+.food-image-wrapper {
+	text-align: center;
+}

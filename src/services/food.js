@@ -16,7 +16,7 @@ export const imageFetcher = (foto) => {
 };
 
 export const getAllFood = async () => {
-	const ALLFOOD_URL = `${FOOD_URL}/all`;
+	const ALLFOOD_URL = `${FOOD_URL}`;
 	try {
 		const data = await axios.get(ALLFOOD_URL);
 		const res = data.data;
@@ -37,7 +37,7 @@ export const getAllFood = async () => {
 };
 
 export const searchFood = async (search) => {
-	const SEARCHFOOD_URL = `${FOOD_URL}/${search}`;
+	const SEARCHFOOD_URL = `${FOOD_URL}/?search=${search}`;
 	try {
 		const data = await axios.get(SEARCHFOOD_URL);
 		const res = data.data;

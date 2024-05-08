@@ -1,6 +1,6 @@
 import axios from "axios";
 import { BASE_API, LOCAL_STORAGE_TOKEN } from "../utils/http-common";
-import { setLocalStorage } from "../utils/LocalStorage";
+import { setLocalStorage, removeLocalStorage } from "../utils/LocalStorage";
 
 const LOGIN_URL = BASE_API + "/admin/auth";
 
@@ -20,5 +20,14 @@ export const LoginHandler = async (userData) => {
 		}
 	} catch (error) {
 		return { error: "Failed to fetch data" };
+	}
+};
+
+export const LogOut = async () => {
+	try {
+		removeLocalStorage(LOCAL_STORAGE_TOKEN);
+		return { success: true };
+	} catch (error) {
+		return { error: "logout unsuccessful" };
 	}
 };

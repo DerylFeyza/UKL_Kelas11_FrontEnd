@@ -1,0 +1,34 @@
+.table-striped {
+	max-width: 150vh;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.history-table td {
+	border-bottom: none; /* Remove bottom border */
+}
+
+.history-table th:last-child,
+.history-table td:last-child {
+	border-right: none; /* Remove border on last column */
+}
+
+.history-table tr {
+	height: 60px;
+	max-width: 1500px;
+}
+
+.history-table ul {
+	height: 100%;
+}
+
+.history-container {
+	margin-top: 100px;
+	height: 80vh;
+	text-align: center;
+}
+
+.history-table table th:first-child,
+.history-table table td:first-child {
+	width: 5%;
+}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LoginHandler } from "../../services/admin";
 import { useNavigate } from "react-router-dom";
 import "./login.css";
@@ -7,6 +7,14 @@ const Login = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const navigate = useNavigate();
+
+	useEffect(() => {
+		const token = localStorage.getItem("tokenwak");
+		if (token) {
+			// Redirect to the dashboard if token exists
+			navigate("/dashboard");
+		}
+	}, [navigate]);
 
 	const submitHandler = async (e) => {
 		e.preventDefault();

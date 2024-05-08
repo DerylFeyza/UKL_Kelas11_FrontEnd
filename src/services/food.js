@@ -20,6 +20,7 @@ export const getAllFood = async () => {
 	try {
 		const data = await axios.get(ALLFOOD_URL);
 		const res = data.data;
+		console.log(res.data);
 		if (res.status === true) {
 			return {
 				status: true,

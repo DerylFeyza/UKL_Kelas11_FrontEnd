@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
+import { LogOut } from "../services/admin";
 
 const AdminNav = () => {
 	const [activeParam, setActiveParam] = useState("");
 	const location = useLocation();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const urlParts = location.pathname.split("/");
@@ -11,10 +13,24 @@ const AdminNav = () => {
 		setActiveParam(param);
 	}, [location]);
 
+	const handleLogout = async () => {
+		try {
+			const res = await LogOut();
+			if (res.success === true) {
+				navigate("/login");
+				window.location.reload();
+			}
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
 			<div className="container-fluid">
-				<span className="navbar-brand mb-0 h1">Resto Amba</span>
+				<Link className="navbar-brand mb-0 h1" to="/home">
+					Resto Amba{" "}
+				</Link>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -42,14 +58,17 @@ const AdminNav = () => {
 								activeParam === "transaksi" ? "fw-bolder" : "fw-semibold"
 							}`}
 						>
-							<Link className="nav-link" to="/transaksi">
+							<Link className="nav-link" to="/history">
 								Transaksi
 							</Link>
 						</li>
 					</ul>
 					<ul className="navbar-nav ms-auto">
 						<li className="nav-item">
-							<a className="nav-link fw-semibold" href="#">
+							<a
+								className="nav-link fw-semibold"
+								onClick={() => handleLogout()}
+							>
 								Log Out
 							</a>
 						</li>

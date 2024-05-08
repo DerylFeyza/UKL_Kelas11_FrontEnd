@@ -1,0 +1,71 @@
+.product-card-container {
+	transition: transform 0.3s ease, border-radius 0.3s ease;
+	border-radius: 25px;
+	overflow: hidden;
+}
+
+.product-card-details .name {
+	font-size: 16px;
+}
+
+.product-card-details .price {
+	font-weight: bold;
+	font-size: 20px;
+	color: #142850;
+}
+
+.product-card-details .location {
+	font-size: 16px;
+}
+
+.product-card-container:hover {
+	transform: scale(1.05);
+	border-radius: 30px;
+}
+
+.product-card-link {
+	text-decoration: none;
+	color: inherit;
+}
+
+.product-card-container {
+	width: 16.25rem;
+	height: auto;
+}
+
+.card-title {
+	font-size: 1.25rem;
+	white-space: nowrap; /* Prevent the title from wrapping to a new line */
+	overflow: hidden; /* Hide any overflow text */
+	text-overflow: ellipsis; /* Add ellipsis (...) to indicate truncated text */
+}
+
+.card-text {
+	font-size: 1rem; /* Adjust the font size of the text as needed */
+	white-space: nowrap; /* Prevent the text from wrapping to a new line */
+	overflow: hidden; /* Hide any overflow text */
+	text-overflow: ellipsis; /* Add ellipsis (...) to indicate truncated text */
+}
+
+.product-card-details .price {
+	margin: 0;
+}
+
+.custom-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.home-container {
+	padding-top: 100px;
+}
+
+.product-card-container {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.food-card {
+	min-width: 900px;
+}
